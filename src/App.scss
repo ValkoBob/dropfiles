@@ -1,6 +1,66 @@
 .form {
+  padding-top: 5%;
   margin: 0 auto;
-  border: 1px dashed blue;
+  border: 1px dashed #6495ED;
+  border-radius: 1px;
   width: 500px;
   height: 250px;
+  background-color: #F0F8FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & h2 {
+    color: #42526e;
+  }
+  & span {
+    padding-bottom: 15px;
+  }
+  & form [type="file"] + label {
+    background-color: #4169E1;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    filter: brightness(85%);
+  }
+  &-files {
+    & button {
+      margin-left: 20px;
+      cursor: pointer;
+      width: 80px;
+      height: 30px;
+      border: 1px solid #42526e;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+    & [type="file"] + label {
+      padding: 5px 15px;
+      margin-left: 20px;
+      cursor: pointer;
+      width: 80px;
+      height: 30px;
+      border: 1px solid #42526e;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+  }
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
 }
